@@ -1,0 +1,12 @@
+{
+    "name": "abhi",
+    "age": "25",
+    "school": [
+        "uncc",
+        "mit",
+        "rps",
+        "convent"
+    ],
+    "null_val": null,
+    "bool_val": true
+}

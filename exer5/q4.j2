@@ -1,0 +1,21 @@
+#conditionals
+#loop
+{%- for vrf in vrf_list %}
+vrf definition {{vrf.name}}
+ rd {{vrf.number}}
+ !
+{%- if vrf.ipv4_enabled %}
+ address-family ipv4
+  route-target export 100:1
+  route-target import 100:1
+ exit-address-family
+ !
+{%- endif %}
+{%- if vrf.ipv6_enabled %}
+ address-family ipv6
+  route-target export 100:1
+  route-target import 100:1
+ exit-address-family
+{%- endif %}
+{% endfor -%}
+

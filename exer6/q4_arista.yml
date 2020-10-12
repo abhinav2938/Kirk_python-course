@@ -1,0 +1,39 @@
+---
+arista1:
+  username: pyclass
+  transport: https
+  host: arista1.lasthop.io
+  port: 443
+  data:
+   intf_name: loopback10
+   intf_ip: 172.24.10.1
+   intf_mask: 28
+
+arista2:
+  username: pyclass
+  transport: https
+  host: arista2.lasthop.io
+  port: 443
+  data:
+   intf_name: loopback10
+   intf_ip: 172.24.10.1
+   intf_mask: 28
+
+arista3:
+  username: pyclass
+  transport: https
+  host: arista3.lasthop.io
+  port: 443
+  data:
+   intf_name: loopback10
+   intf_ip: 172.24.10.1
+   intf_mask: 28
+arista4:
+  username: pyclass
+  transport: https
+  host: arista4.lasthop.io
+  port: 443
+  data:
+   intf_name: loopback10
+   intf_ip: 172.24.10.1
+   intf_mask: 28

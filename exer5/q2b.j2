@@ -1,0 +1,7 @@
+interface {{intf_id}}
+  ip address {{ip_add}}/{{subnet_mask}}
+
+router bgp {{local_as}}
+  neighbor {{peer_ip}} remote-as 22
+    address-family ipv4 unicast
+

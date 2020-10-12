@@ -1,0 +1,19 @@
+Value MODEL (\S+)
+Value MEMORY (\d+K)
+Value PID (\S+)
+
+
+Start
+    #multiple ways of doing this 
+    #^cisco ${MODEL} .*with ${MEMORY}/\d+K bytes of memory
+    #^cisco ${MODEL} .*with ${MEMORY}.*
+  ^cisco ${MODEL} .*with ${MEMORY}.*$$
+  ^Processor board ID ${PID} -> Record
+
+EOF
+
+#cisco C1111-4P (1RU) processor with 1401823K/6147K bytes of memory.
+#Processor board ID FGL222290LB
+#1 Virtual Ethernet interfac
+#6 Gigabit Ethernet interfaces
+#32768K bytes of non-volatile configuration memory.

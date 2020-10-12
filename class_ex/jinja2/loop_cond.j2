@@ -1,0 +1,27 @@
+{%- for intf_number in range(20) %}
+interface GigabitEthernet0/0/{{intf_number}}
+  switchport access vlan 400
+  switchport mode access
+!
+{%- endfor %} 
+
+
+#nested loops
+{%- for intf_number in range(4) %}
+  {%- for slots in range (25) %}
+interface GigabitEthernet0/{{intf_number}}/{{slots}}
+  {%- endfor %}
+{%- endfor %}
+
+
+#for loop with conditional
+{%- for intf_number in range(20) %}
+  {%- if intf_number == 10 %}
+interface GigabitEthernet0/0/{{intf_number}}
+  {%- endif %}
+{%- endfor %}
+
+#jinja2 comment, this is just a string literal
+{#You can't see me #}
+
+

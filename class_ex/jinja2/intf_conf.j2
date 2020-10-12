@@ -1,0 +1,6 @@
+interface gi0/0
+ {%- if primary_ip %}
+ ip address 32.45.12.23 255.255.255.0
+ {%- endif %}
+ negotiation auto
+
